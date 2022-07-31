@@ -7,7 +7,7 @@ const id = +url.getParam('id');
 templating.foreach(
   'body',
   '.card-dish',
-  data.find((item) => item.id === id).dishes,
+  data.restaurants.find((item) => item.id === id).dishes,
 );
 
 templating.destroy();
