@@ -24,14 +24,11 @@
         <section class="section-title">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <a href="#section-restaurants">Explorer nos restaurants</a>
+            <a class="button" href="#section-restaurants">Explorer nos restaurants</a>
         </section>
         <section class="section-howto">
             <h2>Fonctionnement</h2>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
             </ul>
         </section>
         <section class="section-restaurants" id="section-restaurants">
@@ -50,6 +47,11 @@
     </footer>
 
     <div id="templates">
+        <li class="card-howto">
+            <span class="badge-step">{{id}}</span>
+            <i class="{{icon}}"></i>
+            <span>{{text}}</span>
+        </li>
         <a class="card-restaurant" href="restaurant.html?id={{id}}">
             <img data-tpl-raw-src="./images/restaurants/{{image}}" alt="{{name}}">
             <div class="content">

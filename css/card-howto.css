@@ -1,0 +1,22 @@
+.card-howto {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  border-radius: 15px;
+  background-color: var(--color-light-grey);
+  height: 70px;
+  box-shadow: 0 0 15px 0 grey;
+}
+
+.card-howto .badge-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: var(--color-primary);
+  color: white;
+  margin: -15px
+}
