@@ -16,8 +16,19 @@
       text: 'Dégustez au restaurant',
     },
   ],
-  dishes: [
-
+  dishTypes: [
+    {
+      code: 'entree',
+      label: 'Entrées',
+    },
+    {
+      code: 'main',
+      label: 'Plats',
+    },
+    {
+      code: 'dessert',
+      label: 'Desserts',
+    },
   ],
   restaurants: [
     {

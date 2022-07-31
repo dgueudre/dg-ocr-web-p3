@@ -8,20 +8,38 @@
     <meta name="description" content="Ohmyfood commande de repas en ligne">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <script src="https://kit.fontawesome.com/666540edff.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout-restaurant.css" />
     <title>Ohmyfood</title>
 </head>
 
 <body>
+    <header>
+        <i class="fa-solid fa-arrow-left"></i>
+        <h1>ohmyfood</h1>
+    </header>
+    <main>
+        <img data-tpl-raw-src="./images/restaurants/{{image}}" alt="{{name}}">
+        <section>
+            <h2>{{name}}</h2>
+            <ul></ul>
+        </section>
+    </main>
+    <footer></footer>
     <div id="templates">
-        <a class="card-dish" href="#">
+        <li class="menu-section menu-section-{{code}}">
+            <h3>{{label}}</h3>
+            <ul>
+            </ul>
+        </li>
+        <li class="card-dish">
             <div class="card-dish-content">
                 <h4>{{title}}</h4>
                 <p>{{subtitle}}</p>
             </div>
             <div class="card-dish-price"><strong>{{price}}€</strong></div>
             <div class="card-dish-check"><i class="fa-solid fa-circle-check"></i></div>
-        </a>
+        </li>
     </div>
 
     <script type="module" src="./js/restaurant.js"></script>
