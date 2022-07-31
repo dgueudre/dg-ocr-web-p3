@@ -7,7 +7,7 @@ export default {
     data.forEach((item) => {
       container.innerHTML += tplHtml
         .replace(/{{\s?(\w+)\s?}}/g, (_, token) => item[token])
-        .replace('data-src', 'src');
+        .replace(/data-tpl-raw-(\w+)/g, (_, token) => token);
     });
   },
   destroy: () => {
