@@ -13,5 +13,55 @@
 </head>
 
 <body>
+    <header>
+        <h1>ohmyfood</h1>
+    </header>
+    <main>
+        <section class="section-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Paris, Belleville</span>
+        </section>
+        <section class="section-title">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <a href="#section-restaurants">Explorer nos restaurants</a>
+        </section>
+        <section class="section-howto">
+            <h2>Fonctionnement</h2>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
+        <section class="section-restaurants" id="section-restaurants">
+            <h2>Restaurants</h2>
+            <div></div>
+        </section>
+    </main>
+    <footer>
+        <h1>ohmyfood</h1>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </footer>
 
+    <div id="templates">
+        <a class="card-restaurant" href="restaurant.html?id={{id}}">
+            <img data-src="./images/restaurants/{{image}}" alt="{{name}}">
+            <div class="content">
+                <div>
+                    <h4>{{name}}</h4>
+                    <p>{{location}}</p>
+                </div>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <span class="badge-new {{new}}">Nouveau</span>
+        </a>
+    </div>
+
+    <script type="module" src="./js/home.js"></script>
 </body>

@@ -1,0 +1,27 @@
+header,
+.section-location,
+.section-title {
+    text-align: center;
+}
+
+.section-location {
+    background-color: var(--color-grey);
+}
+
+.section-title,
+.section-restaurants {
+    background-color: var(--color-light-grey);
+    padding: 15px;
+}
+
+/* .section-restaurants>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+} */
+
+footer {
+    background-color: var(--color-dark-grey);
+    color: white;
+    padding: 15px;
+}

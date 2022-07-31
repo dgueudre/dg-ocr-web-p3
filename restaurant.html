@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ohmyfood commande de repas en ligne">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <script src="https://kit.fontawesome.com/666540edff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Ohmyfood</title>
+</head>
+
+<body>
+    <div id="templates">
+        <a class="card-dish" href="#">
+            <div class="card-dish-content">
+                <h4>{{title}}</h4>
+                <p>{{subtitle}}</p>
+            </div>
+            <div class="card-dish-price"><strong>{{price}}€</strong></div>
+            <div class="card-dish-check"><i class="fa-solid fa-circle-check"></i></div>
+        </a>
+    </div>
+
+    <script type="module" src="./js/restaurant.js"></script>
+</body>

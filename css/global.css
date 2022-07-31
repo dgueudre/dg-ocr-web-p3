@@ -36,6 +36,21 @@ a {
     --color-primary: #9356DC;
     --color-secondary: #FF79DA;
     --color-tertiary: #99E2D0;
+    --color-tertiary-dark: #008766;
+    --color-light-grey: #F6F6F6;
+    --color-grey: #EAEAEA;
+    --color-dark-grey: #353535;
 }
 
 /* common */
+#templates {
+    display: none;
+}
+
+body {
+    font-family: var(--font-family-text);
+}
+
+h1 {
+    font-family: var(--font-family-title);
+}
