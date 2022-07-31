@@ -1,28 +1,33 @@
-const templates = document.querySelector('#templates');
-
-const parse = (html, data) => html
-  .replace(/{{\s?(\w+)\s?}}/g, (_, token) => data[token])
-  .replace(/data-tpl-raw-(\w+)/g, (_, token) => token);
-
-const replace = (selector, data) => {
-  const element = document.querySelector(selector);
-  element.outerHTML = parse(element.outerHTML, data);
+const doParse = (html, data, scope) => {
+  const regexp = new RegExp(`{{\\s?${scope}.(\\w+)\\s?}}`, 'g');
+  return html
+    .replace(regexp, (_, token) => data[token])
+    .replace(/data-tpl-raw-(\w+)/g, (_, token) => token);
 };
 
-const foreach = (containerSelector, tplSelector, data) => {
-  const container = document.querySelector(containerSelector);
-  const tplHtml = templates.querySelector(tplSelector).outerHTML;
-  data.forEach((item) => {
-    container.innerHTML += parse(tplHtml, item);
-  });
-};
-
-const destroy = () => {
-  if (templates) {
-    templates.remove();
+const parse = (sources, root = document, parent = null) => {
+  let elem;
+  // eslint-disable-next-line no-cond-assign
+  while (elem = root.querySelector('[data-tpl-action]')) {
+    const { tplAction, tplSource, tplItem } = elem.dataset;
+    const container = elem;
+    const html = elem.innerHTML;
+    container.innerHTML = '';
+    const source = sources[tplSource](parent);
+    if (tplAction === 'foreach') {
+      // eslint-disable-next-line no-loop-func
+      source.forEach((item) => {
+        container.innerHTML += doParse(html, item, tplItem);
+        parse(sources, elem, item);
+      });
+    } else if (tplAction === 'replace') {
+      container.innerHTML += doParse(html, source, tplSource);
+      parse(sources, elem, source);
+    }
+    elem.removeAttribute('data-tpl-action');
   }
 };
 
 export default {
-  replace, foreach, destroy,
+  parse,
 };

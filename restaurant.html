@@ -18,28 +18,29 @@
         <i class="fa-solid fa-arrow-left"></i>
         <h1>ohmyfood</h1>
     </header>
-    <main>
-        <img data-tpl-raw-src="./images/restaurants/{{image}}" alt="{{name}}">
+    <main data-tpl-action="replace" data-tpl-source="restaurant">
+        <img data-tpl-raw-src="./images/restaurants/{{restaurant.image}}" alt="{{restaurant.name}}">
         <section>
-            <h2>{{name}}</h2>
-            <ul></ul>
+            <h2>{{restaurant.name}}</h2>
+            <ul data-tpl-action="foreach" data-tpl-source="dishTypes" data-tpl-item="type">
+                <li class="menu-section menu-section-{{type.code}}">
+                    <h3>{{type.label}}</h3>
+                    <ul data-tpl-action="foreach" data-tpl-source="dishes" data-tpl-item="dish">
+                        <li class="card-dish">
+                            <div class="card-dish-content">
+                                <h4>{{dish.title}}</h4>
+                                <p>{{dish.subtitle}}</p>
+                            </div>
+                            <div class="card-dish-price"><strong>{{dish.price}}€</strong></div>
+                            <div class="card-dish-check"><i class="fa-solid fa-circle-check"></i></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </section>
     </main>
     <footer></footer>
     <div id="templates">
-        <li class="menu-section menu-section-{{code}}">
-            <h3>{{label}}</h3>
-            <ul>
-            </ul>
-        </li>
-        <li class="card-dish">
-            <div class="card-dish-content">
-                <h4>{{title}}</h4>
-                <p>{{subtitle}}</p>
-            </div>
-            <div class="card-dish-price"><strong>{{price}}€</strong></div>
-            <div class="card-dish-check"><i class="fa-solid fa-circle-check"></i></div>
-        </li>
     </div>
 
     <script type="module" src="./js/restaurant.js"></script>
