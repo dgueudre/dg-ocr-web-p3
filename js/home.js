@@ -1,5 +1,5 @@
 import data from './data.js';
-import templating from './templating.js';
+import templating from './lib/templating.js';
 
 templating.foreach(
   '.section-howto>ul',

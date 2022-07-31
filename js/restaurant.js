@@ -1,6 +1,6 @@
 import data from './data.js';
-import templating from './templating.js';
-import url from './url.js';
+import templating from './lib/templating.js';
+import url from './lib/url.js';
 
 const id = +url.getParam('id');
 
