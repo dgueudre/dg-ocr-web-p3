@@ -28,8 +28,9 @@ const replace = (sources, elem, parent, callback) => {
 };
 
 const include = (elem, callback) => {
+  const { tplSource } = elem.dataset;
   const container = elem;
-  fetch('templates/footer.html')
+  fetch(tplSource)
     .then((response) => response.text())
     .then((newHtml) => {
       container.outerHTML = newHtml;
