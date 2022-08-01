@@ -6,6 +6,5 @@
     "editor.tabSize": 2,
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
-    "eslint.packageManager": "yarn",
     "javascript.preferences.importModuleSpecifier": "non-relative"
 }
