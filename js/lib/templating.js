@@ -5,35 +5,52 @@ const doParse = (html, data, scope) => {
     .replace(/data-tpl-raw-(\w+)/g, (_, token) => token);
 };
 
+const foreach = (sources, elem, parent, callback) => {
+  const { tplSource, tplItem } = elem.dataset;
+  const container = elem;
+  const html = container.innerHTML;
+  container.innerHTML = '';
+  const source = sources[tplSource](parent);
+  source.forEach((item) => {
+    container.innerHTML += doParse(html, item, tplItem);
+    callback(item);
+  });
+};
+
+const replace = (sources, elem, parent, callback) => {
+  const { tplSource } = elem.dataset;
+  const container = elem;
+  const html = container.innerHTML;
+  container.innerHTML = '';
+  const source = sources[tplSource](parent);
+  container.innerHTML += doParse(html, source, tplSource);
+  callback(source);
+};
+
+const include = (elem, callback) => {
+  const container = elem;
+  fetch('templates/footer.html')
+    .then((response) => response.text())
+    .then((newHtml) => {
+      container.outerHTML = newHtml;
+      callback();
+    });
+};
+
 const parse = (sources, root = document, parent = null) => {
-  let elem;
-  // eslint-disable-next-line no-cond-assign
-  while (elem = root.querySelector('[data-tpl-action]')) {
-    const { tplAction, tplSource, tplItem } = elem.dataset;
+  let elem = root.querySelector('[data-tpl-action]');
+  while (elem) {
+    const { tplAction } = elem.dataset;
     const container = elem;
-    const html = elem.innerHTML;
-    container.innerHTML = '';
     if (tplAction === 'foreach') {
-      const source = sources[tplSource](parent);
-      // eslint-disable-next-line no-loop-func
-      source.forEach((item) => {
-        container.innerHTML += doParse(html, item, tplItem);
-        parse(sources, elem, item);
-      });
+      foreach(sources, container, parent, (item) => parse(sources, container, item));
     } else if (tplAction === 'replace') {
-      const source = sources[tplSource](parent);
-      container.innerHTML += doParse(html, source, tplSource);
-      parse(sources, elem, source);
+      replace(sources, container, parent, (item) => parse(sources, container, item));
     } else if (tplAction === 'include') {
-      const elem2 = elem;
-      fetch('templates/footer.html')
-        .then((response) => response.text())
-        .then((newHtml) => {
-          elem2.outerHTML = newHtml;
-          parse(sources, elem2);
-        });
+      include(container, () => parse(sources, container));
     }
     elem.removeAttribute('data-tpl-action');
+    elem = root.querySelector('[data-tpl-action]');
   }
 };
 

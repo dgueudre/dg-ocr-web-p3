@@ -1,4 +1,4 @@
-import data from "../data.json" assert { type: "json" };
+import data from '../data.json' assert { type: "json" };
 import templating from './lib/templating.js';
 import url from './lib/url.js';
 
