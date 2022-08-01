@@ -1,0 +1,14 @@
+[
+  {
+    "code": "entree",
+    "label": "Entrées"
+  },
+  {
+    "code": "main",
+    "label": "Plats"
+  },
+  {
+    "code": "dessert",
+    "label": "Desserts"
+  }
+]
