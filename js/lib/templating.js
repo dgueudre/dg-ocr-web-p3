@@ -13,16 +13,25 @@ const parse = (sources, root = document, parent = null) => {
     const container = elem;
     const html = elem.innerHTML;
     container.innerHTML = '';
-    const source = sources[tplSource](parent);
     if (tplAction === 'foreach') {
+      const source = sources[tplSource](parent);
       // eslint-disable-next-line no-loop-func
       source.forEach((item) => {
         container.innerHTML += doParse(html, item, tplItem);
         parse(sources, elem, item);
       });
     } else if (tplAction === 'replace') {
+      const source = sources[tplSource](parent);
       container.innerHTML += doParse(html, source, tplSource);
       parse(sources, elem, source);
+    } else if (tplAction === 'include') {
+      const elem2 = elem;
+      fetch('templates/footer.html')
+        .then((response) => response.text())
+        .then((newHtml) => {
+          elem2.outerHTML = newHtml;
+          parse(sources, elem2);
+        });
     }
     elem.removeAttribute('data-tpl-action');
   }
