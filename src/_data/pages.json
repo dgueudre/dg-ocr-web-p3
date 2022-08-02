@@ -1,0 +1,8 @@
+{
+  "home": {
+    "js": "home.js"
+  },
+  "restaurant": {
+    "js": "restaurant.js"
+  }
+}
