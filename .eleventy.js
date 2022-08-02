@@ -9,7 +9,7 @@ module.exports = config => {
     htmlTemplateEngine: 'njk',
     dir: {
       input: 'src',
-      output: 'docs'
+      output: 'public'
     }
   };
 };
