@@ -3,14 +3,14 @@
 
 name: Node.js CI
 
-permissions:
-  id-token: write
-  
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
+permissions:
+  id-token: write
 
 jobs:
   build:
