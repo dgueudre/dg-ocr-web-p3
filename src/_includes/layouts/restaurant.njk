@@ -4,7 +4,7 @@
     <i class="fa-solid fa-arrow-left"></i>
     <h1>ohmyfood</h1>
   </header>
-  <main data-tpl-action="replace" data-tpl-source="restaurant">
+  <main>
     <img src="./assets/images/restaurants/{{restaurant.image}}" alt="{{restaurant.name}}">
     <section>
       <h2>{{restaurant.name}}</h2>
@@ -13,7 +13,7 @@
           <li class="menu-section menu-section-{{type.code}}">
             <h3>{{type.label}}</h3>
             <ul>
-              {% for dish in restaurant.dishes | bytype(type.code) %}
+              {% for dish in restaurant.dishes | filter_by_type(type.code) %}
                 <li class="card-dish">
                   <div class="card-dish-content">
                     <h4>{{dish.title}}</h4>

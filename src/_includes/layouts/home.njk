@@ -27,7 +27,7 @@
         </section>
         <section class="section-restaurants" id="section-restaurants">
             <h2>Restaurants</h2>
-            {% for restaurant in restaurants %}
+            {% for restaurant in restaurants | sort_by_id %}
                 <a class="card-restaurant" href="{{restaurant.name | slug}}.html">
                     <img src="./assets/images/restaurants/{{restaurant.image}}" alt="{{restaurant.name}}">
                     <div class="content">

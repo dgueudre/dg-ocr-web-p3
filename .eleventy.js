@@ -1,7 +1,8 @@
 module.exports = config => {
   config.addPassthroughCopy('./assets/');
 
-  config.addNunjucksFilter("bytype", (dishes, type) => dishes.filter(dish => dish.type === type));
+  config.addNunjucksFilter("filter_by_type", (dishes, type) => dishes.filter(dish => dish.type === type));
+  config.addNunjucksFilter("sort_by_id", (items) => items.sort((a, b) => a.id - b.id));
 
   return {
     markdownTemplateEngine: 'njk',

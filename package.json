@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx eleventy --serve",
     "build": "npx eleventy",
-    "clear": "rm -rf docs"
+    "clear": "rm -rf public"
     
   },
   "author": "",
