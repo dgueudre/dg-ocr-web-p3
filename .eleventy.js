@@ -1,5 +1,7 @@
 module.exports = config => {
-  config.addPassthroughCopy('./assets/');
+  config.addPassthroughCopy('src/images');
+  config.addPassthroughCopy({ "src/**/*.css": "css" });
+
 
   config.addNunjucksFilter("filter_by_type", (dishes, type) => dishes.filter(dish => dish.type === type));
   config.addNunjucksFilter("sort_by_id", (items) => items.sort((a, b) => a.id - b.id));
@@ -10,7 +12,9 @@ module.exports = config => {
     htmlTemplateEngine: 'njk',
     dir: {
       input: 'src',
-      output: 'public'
+      output: 'public',
+      includes: "templates",
+      data: "data"
     }
   };
 };

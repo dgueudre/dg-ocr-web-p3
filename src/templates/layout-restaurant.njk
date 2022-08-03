@@ -1,0 +1,26 @@
+{% extends "layout-base.njk" %}
+{% block content %}
+  <header>
+    <i class="fa-solid fa-arrow-left"></i>
+    <h1>ohmyfood</h1>
+  </header>
+  <main>
+    <img src="./images/restaurants/{{restaurant.image}}" alt="{{restaurant.name}}">
+    <section>
+      <h2>{{restaurant.name}}</h2>
+      <ul>
+        {% for type in dishTypes %}
+          <li class="menu-section menu-section-{{type.code}}">
+            <h3>{{type.label}}</h3>
+            <ul>
+              {% for dish in restaurant.dishes | filter_by_type(type.code) %}
+                <li>{% include 'card-dish.njk'%}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+
+{% endblock %}

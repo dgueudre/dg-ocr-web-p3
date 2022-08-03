@@ -1,0 +1,11 @@
+<a class="card-restaurant" href="{{restaurant.name | slug}}.html">
+    <img src="./images/restaurants/{{restaurant.image}}" alt="{{restaurant.name}}">
+    <div class="content">
+        <div>
+            <h4>{{restaurant.name}}</h4>
+            <p>{{restaurant.location}}</p>
+        </div>
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <span class="badge-new {{restaurant.new}}">Nouveau</span>
+</a>
