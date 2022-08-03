@@ -1,6 +1,6 @@
 module.exports = config => {
   config.addPassthroughCopy('src/images');
-  config.addPassthroughCopy({ "src/**/*.css": "css" });
+  config.addPassthroughCopy('src/css');
 
 
   config.addNunjucksFilter("filter_by_type", (dishes, type) => dishes.filter(dish => dish.type === type));
