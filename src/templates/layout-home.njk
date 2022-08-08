@@ -9,12 +9,12 @@
             <span>Paris, Belleville</span>
         </section>
         <section class="section-title">
-            <h2>Réservez le menu qui vous convient</h2>
+            <h3>Réservez le menu qui vous convient</h3>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             <a class="button" href="#section-restaurants">Explorer nos restaurants</a>
         </section>
         <section class="section-howto">
-            <h2>Fonctionnement</h2>
+            <h3>Fonctionnement</h3>
             <ul>
                 {% for step in steps %}
                     <li>{% include 'card-step.njk'%}</li>
@@ -22,7 +22,7 @@
             </ul>
         </section>
         <section class="section-restaurants" id="section-restaurants">
-            <h2>Restaurants</h2>
+            <h3>Restaurants</h3>
             <ul>
                 {% for restaurant in restaurants | sort_by_id %}
                     <li>{% include 'card-restaurant.njk' %}</li>

@@ -13,7 +13,7 @@
       <ul>
         {% for type in dishTypes %}
           <li class="menu-section menu-section-{{type.code}}">
-            <h3>{{type.label}}</h3>
+            <h4>{{type.label}}</h4>
             <ul>
               {% for dish in restaurant.dishes | filter_by_type(type.code) %}
                 <li>{% include 'card-dish.njk'%}</li>
