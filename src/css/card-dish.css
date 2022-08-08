@@ -1,23 +1,25 @@
 .card-dish {
     --width-check: 0px;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 grey;
 }
 
-.card-dish h4,
-.card-dish p {
+.card-dish .content,
+.card-dish .content h4,
+.card-dish .content p {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
-.card-dish-content {
-    margin-right: auto;
+.card-dish .content {
+    /* margin-right: auto; */
 }
 
-.card-dish-check {
+.card-dish .check {
     width: var(--width-check);
     overflow: hidden;
 }
