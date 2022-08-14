@@ -34,12 +34,15 @@ a {
     --font-family-title: 'Shrikhand', cursive;
     --font-family-text: 'Roboto', sans-serif;
     --color-primary: #9356DC;
+    --color-primary-faded: rgb(147, 86, 220, 0.1);
     --color-secondary: #FF79DA;
     --color-tertiary: #99E2D0;
     --color-tertiary-dark: #008766;
-    --color-light-grey: #F6F6F6;
-    --color-grey: #EAEAEA;
-    --color-dark-grey: #353535;
+    --color-darker-grey: #353535;
+    --color-dark-grey: #7E7E7E;
+    --color-grey: #CFCFCF;
+    --color-light-grey: #EAEAEA;
+    --color-lighter-grey: #F6F6F6;
 }
 
 /* common */
@@ -52,10 +55,15 @@ body {
     font-size: 15px;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--font-family-title);
 }
 
 h2 {
     font-weight: normal;
+}
+
+h3 {
+    font-size: 1.6em;
 }

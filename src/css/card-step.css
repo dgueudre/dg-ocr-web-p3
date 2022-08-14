@@ -4,19 +4,33 @@
   align-items: center;
   gap: 35px;
   border-radius: 15px;
-  background-color: var(--color-light-grey);
+  background: var(--color-lighter-grey);
   height: 70px;
-  box-shadow: 0 0 15px 0 grey;
+  box-shadow: 0 5px 5px 2px var(--color-light-grey);
+}
+
+.card-step i {
+  color: var(--color-dark-grey);
+  font-size: 1.5em;
 }
 
 .card-step .badge-step {
+  --badge-size: 26px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
+  height: var(--badge-size);
+  width: var(--badge-size);
   border-radius: 100%;
   background-color: var(--color-primary);
   color: white;
-  margin: -15px
+  margin-left: calc(0px - var(--badge-size) / 2);
+}
+
+.card-step:hover {
+  background: var(--color-primary-faded);
+}
+
+.card-step:hover i {
+  color: var(--color-primary);
 }

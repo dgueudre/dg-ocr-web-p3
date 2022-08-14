@@ -6,7 +6,9 @@
     <main>
         <section class="section-location">
             <i class="fa-solid fa-location-dot"></i>
-            <span>Paris, Belleville</span>
+            <span>
+                <strong>Paris, Belleville</strong>
+            </span>
         </section>
         <section class="section-title">
             <h3>Réservez le menu qui vous convient</h3>
@@ -17,14 +19,14 @@
             <h3>Fonctionnement</h3>
             <ul>
                 {% for step in steps %}
-                    <li>{% include 'card-step.njk'%}</li>
+                    <li>{% include 'card-step.njk' %}</li>
                 {% endfor %}
             </ul>
         </section>
         <section class="section-restaurants" id="section-restaurants">
             <h3>Restaurants</h3>
             <ul>
-                {% for restaurant in restaurants | sort_by_id %}
+                {% for restaurant in restaurants | sort_by('id') %}
                     <li>{% include 'card-restaurant.njk' %}</li>
                 {% endfor %}
             </ul>

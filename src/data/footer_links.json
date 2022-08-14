@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "fa-solid fa-utensils",
+        "label": "Proposer un restaurant",
+        "link": "#"
+    },
+    {
+        "icon": "fa-solid fa-handshake-angle",
+        "label": "Devenir partenaire",
+        "link": "#"
+    },
+    {
+        "icon": "",
+        "label": "Mentions légales",
+        "link": "#"
+    },
+    {
+        "icon": "",
+        "label": "Contact",
+        "link": "mailto:no-reply@ohmyfood.local"
+    }
+]

@@ -5,13 +5,24 @@ header,
 }
 
 .section-location {
-    background-color: var(--color-grey);
+    padding: 15px;
+    background: linear-gradient(180deg,
+            var(--color-grey) 0%,
+            var(--color-light-grey) 10%);
+}
+
+.section-location>* {
+    padding: 0 7px;
+}
+
+.section-howto {
+    padding: 15px;
 }
 
 .section-title,
 .section-restaurants {
-    background-color: var(--color-light-grey);
     padding: 15px;
+    background-color: var(--color-lighter-grey);
 }
 
 /* .section-restaurants>div {
@@ -19,9 +30,3 @@ header,
     flex-wrap: wrap;
     gap: 20px;
 } */
-
-footer {
-    background-color: var(--color-dark-grey);
-    color: white;
-    padding: 15px;
-}

@@ -1,0 +1,13 @@
+<footer>
+    <h2>obmyfood</h2>
+    <ul>
+        {% for link in footer_links %}
+            <li>
+                <a href="{{ link.link }}">
+                    <i class="{{ link.icon }}"></i>
+                    <span>{{ link.label }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</footer>

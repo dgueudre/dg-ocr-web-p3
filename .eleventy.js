@@ -3,8 +3,8 @@ module.exports = config => {
   config.addPassthroughCopy('src/css');
 
 
-  config.addNunjucksFilter("filter_by_type", (dishes, type) => dishes.filter(dish => dish.type === type));
-  config.addNunjucksFilter("sort_by_id", (items) => items.sort((a, b) => a.id - b.id));
+  config.addNunjucksFilter("filter_by", (array, property, value) => array.filter(item => item[property] === value));
+  config.addNunjucksFilter("sort_by", (array, property) => array.sort((a, b) => a[property] - b[property]));
 
   return {
     markdownTemplateEngine: 'njk',

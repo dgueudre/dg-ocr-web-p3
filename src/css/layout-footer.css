@@ -1,0 +1,17 @@
+footer {
+    background-color: var(--color-darker-grey);
+    color: white;
+    padding: 15px;
+}
+
+footer li {
+    margin: 10px 0;
+}
+
+footer i {
+    width: 20px;
+}
+
+footer a:hover {
+    opacity: 0.5;
+}
