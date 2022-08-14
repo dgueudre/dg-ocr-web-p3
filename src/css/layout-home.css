@@ -15,6 +15,10 @@ header,
     padding: 0 7px;
 }
 
+.section-howto {
+    padding: 15px;
+}
+
 .section-title,
 .section-restaurants {
     padding: 15px;
@@ -28,7 +32,7 @@ header,
 } */
 
 footer {
-    background-color: var(--color-dark-grey);
+    background-color: var(--color-darker-grey);
     color: white;
     padding: 15px;
 }

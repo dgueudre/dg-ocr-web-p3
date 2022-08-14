@@ -8,4 +8,5 @@
   height: var(--height);
   box-shadow: 0 5px 5px 0 var(--color-grey);
   background: linear-gradient(0deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  margin: 20px;
 }
