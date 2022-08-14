@@ -24,7 +24,7 @@
         <section class="section-restaurants" id="section-restaurants">
             <h3>Restaurants</h3>
             <ul>
-                {% for restaurant in restaurants | sort_by_id %}
+                {% for restaurant in restaurants | sort_by('id') %}
                     <li>{% include 'card-restaurant.njk' %}</li>
                 {% endfor %}
             </ul>
