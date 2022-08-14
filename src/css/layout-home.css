@@ -30,9 +30,3 @@ header,
     flex-wrap: wrap;
     gap: 20px;
 } */
-
-footer {
-    background-color: var(--color-darker-grey);
-    color: white;
-    padding: 15px;
-}
