@@ -37,9 +37,10 @@ a {
     --color-secondary: #FF79DA;
     --color-tertiary: #99E2D0;
     --color-tertiary-dark: #008766;
-    --color-light-grey: #F6F6F6;
-    --color-grey: #EAEAEA;
     --color-dark-grey: #353535;
+    --color-grey: #D0D0D0;
+    --color-light-grey: #EAEAEA;
+    --color-lighter-grey: #F6F6F6;
 }
 
 /* common */
@@ -52,10 +53,15 @@ body {
     font-size: 15px;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--font-family-title);
 }
 
 h2 {
     font-weight: normal;
+}
+
+h3 {
+    font-size: 1.6em;
 }

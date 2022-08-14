@@ -5,13 +5,20 @@ header,
 }
 
 .section-location {
-    background-color: var(--color-grey);
+    padding: 15px;
+    background: linear-gradient(180deg,
+            var(--color-grey) 0%,
+            var(--color-light-grey) 10%);
+}
+
+.section-location>* {
+    padding: 0 7px;
 }
 
 .section-title,
 .section-restaurants {
-    background-color: var(--color-light-grey);
     padding: 15px;
+    background-color: var(--color-lighter-grey);
 }
 
 /* .section-restaurants>div {

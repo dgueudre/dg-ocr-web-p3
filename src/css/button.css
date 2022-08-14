@@ -1,11 +1,11 @@
 .button {
-  --height: 40px;
+  --height: 50px;
   display: inline-flex;
   align-items: center;
-  padding: 0 calc(var(--height) / 2);
+  padding: 0px calc(var(--height) / 2);
   color: white;
   border-radius: var(--height);
   height: var(--height);
-  box-shadow: 0 0 15px 0 grey;
+  box-shadow: 0 5px 5px 0 var(--color-grey);
   background: linear-gradient(0deg, var(--color-primary) 0%, var(--color-secondary) 100%);
 }

@@ -4,7 +4,7 @@
   align-items: center;
   gap: 35px;
   border-radius: 15px;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-lighter-grey);
   height: 70px;
   box-shadow: 0 0 15px 0 grey;
 }
