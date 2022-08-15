@@ -54,3 +54,12 @@ main hr {
 .menu-section li {
   margin: 20px 0;
 }
+
+.menu-order {
+  text-align: center;
+}
+
+.menu-order .button {
+  padding-right: 50px;
+  padding-left: 50px;
+}
