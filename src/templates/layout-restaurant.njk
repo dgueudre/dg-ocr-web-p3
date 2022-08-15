@@ -9,11 +9,15 @@
   <main>
     <img src="./images/restaurants/{{restaurant.image}}" alt="{{restaurant.name}}">
     <section>
-      <h2>{{restaurant.name}}</h2>
+      <div class="page-title">
+        <h2>{{restaurant.name}}</h2>
+        <a href="#">{% include 'favorite.njk' %}</a>
+      </div>
       <ul>
         {% for type in dishTypes %}
           <li class="menu-section menu-section-{{type.code}}">
             <h4>{{type.label}}</h4>
+            <hr>
             <ul>
               {% for dish in restaurant.dishes | filter_by('type', type.code) %}
                 <li>{% include 'card-dish.njk'%}</li>
