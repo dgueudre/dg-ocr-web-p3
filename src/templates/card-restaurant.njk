@@ -5,10 +5,7 @@
             <h4>{{restaurant.name}}</h4>
             <p>{{restaurant.location}}</p>
         </div>
-        <span class="favorite">
-            <i class="fa-regular fa-heart unactive"></i>
-            <i class="fa-solid fa-heart active"></i>
-        </span>
+        {% include 'favorite.njk' %}
     </div>
     <span class="badge-new {{restaurant.new}}">
         <strong>Nouveau</strong>
