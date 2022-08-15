@@ -1,20 +1,32 @@
 .card-dish {
-    --width-check: 0px;
+    --check-width: 60px;
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: stretch;
     border-radius: 10px;
     box-shadow: 0 5px 10px 0 var(--color-grey);
-    padding: 10px;
     background-color: white;
+    overflow: hidden;
 }
 
-.card-dish .content,
+.card-dish .content {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
 .card-dish .content h5,
 .card-dish .content p {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     width: 100%;
+}
+
+.card-dish .content h5,
+.card-dish .content p>span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .card-dish .content p {
@@ -24,15 +36,32 @@
     color: var(--color-darker-grey)
 }
 
-.card-dish .content {
-    /* margin-right: auto; */
+.card-dish .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: var(--check-width);
+    background-color: var(--color-tertiary);
+    font-size: 1.5em;
 }
 
 .card-dish .check {
-    width: var(--width-check);
-    overflow: hidden;
+    margin-right: calc(0px - var(--check-width));
+    transition: 0.5s ease-in-out;
 }
 
-.card-dish:hover {
-    --width-check: inherit;
+.card-dish:hover .content {
+    width: calc(100% - var(--check-width));
+    transition: 0.5s ease-in-out;
+}
+
+.card-dish:hover .check {
+    margin-right: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-dish:hover .check i {
+    transform: rotate(360deg);
+    transition: 0.5s ease-in-out;
 }
