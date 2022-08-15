@@ -67,7 +67,6 @@ main hr {
 @media screen and (min-width: 1000px) {
   main .menu-section-type {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 
