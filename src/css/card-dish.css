@@ -23,6 +23,10 @@ li:nth-child(3) .card-dish {
     animation-delay: .6s;
 }
 
+li:nth-child(4) .card-dish {
+    animation-delay: .8s;
+}
+
 .card-dish .content {
     margin: 0;
     padding: 10px;
