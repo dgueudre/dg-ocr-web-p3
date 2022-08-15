@@ -46,6 +46,11 @@ main>section {
 main hr {
   border: 0;
   border-top: 4px solid var(--color-tertiary);
-  width: 50px;
-  margin: 3px 0;
+  width: 40px;
+  margin: 3px 0 10px;
+}
+
+.menu-section,
+.menu-section li {
+  margin: 20px 0;
 }

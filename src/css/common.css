@@ -75,10 +75,11 @@ h4 {
     margin-top: 20px;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    color: var(--color-darker-grey);
 }
 
 h5 {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
