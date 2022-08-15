@@ -13,7 +13,7 @@
         <h2>{{restaurant.name}}</h2>
         <a href="#">{% include 'favorite.njk' %}</a>
       </div>
-      <ul>
+      <ul class="menu-section-type">
         {% for type in dishTypes %}
           <li class="menu-section menu-section-{{type.code}}">
             <h4>{{type.label}}</h4>
@@ -25,10 +25,10 @@
             </ul>
           </li>
         {% endfor %}
-        <div class="menu-order">
-          <a class="button" href="#">Commander</a>
-        </div>
       </ul>
+      <div class="menu-order">
+        <a class="button" href="#">Commander</a>
+      </div>
     </section>
   </main>
 
