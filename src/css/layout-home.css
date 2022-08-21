@@ -1,44 +1,45 @@
 header,
 .section-location,
 .section-title {
-    text-align: center;
+  text-align: center;
 }
 
 .section-location {
-    padding: 15px;
-    background: linear-gradient(180deg,
-            var(--color-grey) 0%,
-            var(--color-light-grey) 10%);
+  padding: 15px;
+  background: linear-gradient(
+    180deg,
+    var(--color-grey) 0%,
+    var(--color-light-grey) 10%
+  );
 }
 
-.section-location>* {
-    padding: 0 7px;
+.section-location > * {
+  padding: 0 7px;
 }
 
 .section-howto {
-    padding: 15px;
+  padding: 15px;
 }
 
 .section-title,
 .section-restaurants {
-    padding: 15px;
-    background-color: var(--color-lighter-grey);
+  padding: 15px;
+  background-color: var(--color-lighter-grey);
 }
 
 @media screen and (min-width: 1000px) {
+  .section-howto ul,
+  .section-restaurants ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-    .section-howto ul,
-    .section-restaurants ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  .section-howto ul > li {
+    width: 30%;
+  }
 
-    .section-howto ul>li {
-        width: 30%;
-    }
-
-    .section-restaurants ul>li {
-        width: 48%;
-    }
+  .section-restaurants ul > li {
+    width: 48%;
+  }
 }
