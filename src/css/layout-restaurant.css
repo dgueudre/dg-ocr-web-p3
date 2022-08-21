@@ -14,6 +14,10 @@
   font-size: 1.5em;
 }
 
+.section-nav a:hover {
+  color: var(--color-tertiary);
+}
+
 .section-nav h1 {
   margin: 0 auto;
 }
@@ -29,13 +33,13 @@ main .favorite {
   font-size: 1.8em;
 }
 
-main>img {
+main > img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-main>section {
+main > section {
   position: relative;
   border-radius: var(--radius) var(--radius) 0 0;
   margin-top: -50px;
@@ -70,7 +74,7 @@ main hr {
     justify-content: space-between;
   }
 
-  main .menu-section-type>li {
+  main .menu-section-type > li {
     width: 30%;
   }
 }
