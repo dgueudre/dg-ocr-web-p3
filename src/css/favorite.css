@@ -1,16 +1,40 @@
+.favorite {
+  --size: 1em;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 0.5em;
+}
+
+.favorite i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+
 .favorite i.active {
-    display: none;
-    color: linear-gradient(0deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    background: linear-gradient(0deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  opacity: 0;
+  color: linear-gradient(
+    0deg,
+    var(--color-secondary) 0%,
+    var(--color-primary) 70%
+  );
+  background: linear-gradient(
+    0deg,
+    var(--color-secondary) 0%,
+    var(--color-primary) 70%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in;
 }
 
-.favorite:hover>i.active {
-    display: initial;
+.favorite:hover > i.active {
+  opacity: 1;
 }
 
-.favorite:hover>i.unactive {
-    display: none;
+.favorite:hover > i.unactive {
+  opacity: 0;
 }
